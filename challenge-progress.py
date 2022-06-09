@@ -12,7 +12,7 @@ else:
 fonsize = 350
 distance_total = 1378.50
 distance_per_round = 0.75
-distance_elapsed = 1500.0
+distance_elapsed = 0.0
 distance_remaining = distance_total - distance_elapsed
 rounds_counted = distance_elapsed / distance_per_round
 
