@@ -14,7 +14,7 @@ distance_total = 1378.50
 rounds_counted = 0
 distance_per_round = 0.75
 distance_elapsed = 0.0
-distance_remaining = distance_total
+distance_remaining = distance_total - distance_elapsed
 
 #set up the window
 root=tk.Tk()
