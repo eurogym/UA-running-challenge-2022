@@ -24,9 +24,9 @@ dblDistanceElapsed = DoubleVar()
 dblDistanceElapsed.set(distance_elapsed)
 dblDistanceRemaining = DoubleVar()
 dblDistanceRemaining.set(distance_remaining)
-l_distance_elapsed = Label(root, justify=CENTER, compound=CENTER, textvariable=dblDistanceElapsed, bg="green", fg="white", font=("Arial", fonsize))
+l_distance_elapsed = Label(root, justify=CENTER, compound=CENTER, textvariable=dblDistanceElapsed, bg="blue", fg="white", font=("Arial", fonsize))
 l_distance_elapsed.pack(expand=1, fill="both")
-l_distance_remaining = Label(root, justify=CENTER, compound=CENTER, textvariable=dblDistanceRemaining, bg="red", fg="white", font=("Arial", fonsize))
+l_distance_remaining = Label(root, justify=CENTER, compound=CENTER, textvariable=dblDistanceRemaining, bg="yellow", fg="white", font=("Arial", fonsize))
 l_distance_remaining.pack(expand=1, fill="both")
 
 
@@ -36,8 +36,8 @@ def calculate_distances(event):
     rounds_counted += 1
     distance_elapsed = rounds_counted * distance_per_round
     distance_remaining = distance_total - distance_elapsed
-    dblDistanceElapsed.set(distance_elapsed)
-    dblDistanceRemaining.set(distance_remaining)
+    dblDistanceElapsed.set(round(distance_elapsed, 1))
+    dblDistanceRemaining.set(round(distance_remaining, 1))
     
 
 #binding the SPACE keypress event to the function
